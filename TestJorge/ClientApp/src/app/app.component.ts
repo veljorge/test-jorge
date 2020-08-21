@@ -13,7 +13,11 @@ export class AppComponent {
     this.people = new Array();
   }
 
-  async handler(): Promise<void> {
-    this.people = await this.personService.getPeople().toPromise();
+  handler() {
+    this.personService.getPeople().subscribe(x => {
+      this.people = x;
+    }, error => {
+      console.log(error);
+    })
   }
 }
