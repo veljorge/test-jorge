@@ -56,7 +56,7 @@ namespace Data
 #endif
 
 
-            var token = azureServiceToken.GetAccessTokenAsync("https://database.windows.net/").Result;
+            var token = await azureServiceToken.GetAccessTokenAsync("https://database.windows.net/");
 
             var connection = new SqlConnection()
             {
