@@ -1,0 +1,16 @@
+<body>
+  <app-nav-menu></app-nav-menu>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <button (click)="handler()">get People</button>
+
+  <div>
+    <ol>
+      <li *ngFor="let person of people">
+        {{person.name}} {{person.lastName}}
+      </li>
+    </ol>
+    
+  </div>
+</body>
