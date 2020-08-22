@@ -1,3 +1,4 @@
+import { SecretModel } from './../models/secret.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -14,5 +15,10 @@ export class PersonDataService {
   public getPeople(): Observable<Array<Person>> {
     const url = `${this.baseUrl}getPeople`;
     return this.client.get<Array<Person>>(url);
+  }
+
+  public getSecret(): Observable<SecretModel> {
+    const url = `${this.baseUrl}getSecret`;
+    return this.client.get<SecretModel>(url);
   }
 }

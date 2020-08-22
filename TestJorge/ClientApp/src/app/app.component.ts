@@ -8,16 +8,17 @@ import { Person } from './models/person.model';
 })
 export class AppComponent {
   title = 'app';
+  public secret: string;
   public people: Array<Person>;
   constructor(private personService: PersonDataService) {
     this.people = new Array();
   }
 
-  handler() {
-    this.personService.getPeople().subscribe(x => {
-      this.people = x;
-    }, error => {
-      console.log(error);
-    })
+  async handler() {
+    this.people = await this.personService.getPeople().toPromise();
+  }
+
+  async secretHandler() {
+    this.secret = (await this.personService.getSecret().toPromise()).secret;
   }
 }

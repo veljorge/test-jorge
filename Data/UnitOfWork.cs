@@ -13,34 +13,36 @@ namespace Data
     public class UnitOfWork : IUnitOfWork
     {
         private readonly string _dbConnectionString;
-        public UnitOfWork(IOptions<ConnectionStrings> connectionStrings)
+        private readonly string _secretToShow;
+        public UnitOfWork(IOptions<ConnectionStrings> connectionStrings, IOptions<Secrets> secrets)
         {
             _dbConnectionString = connectionStrings.Value.DB;
-
+            _secretToShow = secrets.Value.Secret;
         }
 
         public async Task<IEnumerable<T>> GetAll<T>()
         {
             try
             {
-                using (var connection = await GetConnection())
-                {
-                    return await connection.GetListAsync<T>();
-                }
+                using var connection = await GetConnection();
+                return await connection.GetListAsync<T>();
             }
             catch (Exception ex)
             {
-
                 throw;
             }
         }
 
+
+        public string GetSecret()
+        {
+            return _secretToShow;
+        }
+
         public async Task<T> Get<T>(Guid id)
         {
-            using (var connection = await GetConnection())
-            {
-                return await connection.GetAsync<T>(id);
-            }
+            using var connection = await GetConnection();
+            return await connection.GetAsync<T>(id);
         }
 
         private async Task<IDbConnection> GetConnection()

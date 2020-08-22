@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.2.0.1, )"
             },
+            "Microsoft.Azure.KeyVault": {
+              "target": "Package",
+              "version": "[3.0.5, )"
+            },
             "Microsoft.Azure.Services.AppAuthentication": {
               "target": "Package",
               "version": "[1.5.0, )"
@@ -69,6 +73,10 @@
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
               "version": "[3.1.7, )"
+            },
+            "Microsoft.IdentityModel.Clients.ActiveDirectory": {
+              "target": "Package",
+              "version": "[5.2.8, )"
             }
           },
           "imports": [

@@ -8,5 +8,7 @@ namespace Data
     {
         Task<T> Get<T>(Guid id);
         Task<IEnumerable<T>> GetAll<T>();
+
+        string GetSecret();
     }
 }

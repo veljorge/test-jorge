@@ -35,8 +35,19 @@ namespace TestJorge.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            
+
         }
 
+        [Route("getSecret")]
+        [HttpGet]
+
+        public IActionResult GetSecret()
+        {
+            return Ok(new SecretsModel()
+            {
+                Secret = _unitOfWork.GetSecret()
+            });
+
+        }
     }
 }
