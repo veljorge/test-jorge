@@ -1,6 +1,8 @@
 ﻿using Data.Configurations;
 using Microsoft.Azure.KeyVault;
 using Microsoft.Azure.Services.AppAuthentication;
+using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
@@ -23,8 +25,19 @@ namespace Data.Extensions
             services.Configure<ConnectionStrings>(configuration.GetSection(nameof(ConnectionStrings)));
             services.Configure<Secrets>(configurationSecrets);
 
+            RegisterAzureColumnEncryption();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
+        }
+
+
+        private static void RegisterAzureColumnEncryption()
+        {
+            var azureServiceProvider = new AzureServiceTokenProvider();
+            SqlColumnEncryptionAzureKeyVaultProvider sqlColumnEncryptionAzureKeyVaultProvider = new SqlColumnEncryptionAzureKeyVaultProvider(new KeyVaultClient.AuthenticationCallback(azureServiceProvider.KeyVaultTokenCallback));
+            var providers = new Dictionary<string, SqlColumnEncryptionKeyStoreProvider>();
+            providers.Add(SqlColumnEncryptionAzureKeyVaultProvider.ProviderName, sqlColumnEncryptionAzureKeyVaultProvider);
+            SqlConnection.RegisterColumnEncryptionKeyStoreProviders(providers);
         }
 
         private static string GetKeyVaultSecrets(IConfiguration config)

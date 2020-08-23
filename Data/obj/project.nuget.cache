@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bTse0vDI7OFilHjEiyBF4VQM+wnP2Vpipimdb1TAZoWK1BYt3981HCgi/qRvM/Cz7/ljor4T9L4kIm/9TMdqVw==",
+  "dgSpecHash": "V0b+bKIliRurT4CIy9U+Fa07dHaWumtNwZgUWlr6zQ71oS1NJlHZMpjc4sJIxVgF7GcVOa/sqLKv5DaK9b7TCw==",
   "success": true,
   "projectFilePath": "E:\\Dev Projects\\TestJorge\\Data\\Data.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.azure.services.appauthentication\\1.5.0\\microsoft.azure.services.appauthentication.1.5.0.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.0\\microsoft.data.sqlclient.2.0.0.nupkg.sha512",
+    "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider\\1.1.1\\microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.1.1.1.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.0\\microsoft.data.sqlclient.sni.runtime.2.0.0.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.7\\microsoft.extensions.configuration.3.1.7.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
@@ -29,7 +30,7 @@
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.20\\microsoft.rest.clientruntime.2.3.20.nupkg.sha512",
-    "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.rest.clientruntime.azure\\3.3.18\\microsoft.rest.clientruntime.azure.3.3.18.nupkg.sha512",
+    "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.rest.clientruntime.azure\\3.3.19\\microsoft.rest.clientruntime.azure.3.3.19.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Jorge Eduardo\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",

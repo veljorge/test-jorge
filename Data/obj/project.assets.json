@@ -117,6 +117,32 @@
           }
         }
       },
+      "Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.KeyVault": "[3.0.4, 4.0.0)",
+          "Microsoft.Azure.KeyVault.WebKey": "[3.0.4, 4.0.0)",
+          "Microsoft.Data.SqlClient": "1.0.19269.1",
+          "Microsoft.Rest.ClientRuntime": "[2.3.20, 3.0.0)",
+          "Microsoft.Rest.ClientRuntime.Azure": "[3.3.19, 4.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Microsoft.Data.SqlClient.SNI.runtime/2.0.0": {
         "type": "package",
         "runtimeTargets": {
@@ -373,18 +399,17 @@
           "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll": {}
         }
       },
-      "Microsoft.Rest.ClientRuntime.Azure/3.3.18": {
+      "Microsoft.Rest.ClientRuntime.Azure/3.3.19": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Rest.ClientRuntime": "[2.3.17, 3.0.0)",
-          "NETStandard.Library": "1.6.1",
+          "Microsoft.Rest.ClientRuntime": "[2.3.19, 3.0.0)",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+          "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.Azure.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+          "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.Azure.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -2349,6 +2374,30 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Data.SqlClient.pdb"
       ]
     },
+    "Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/1.1.1": {
+      "sha512": "+AcpLQHWF04aypnUrv62RL63a1DqHffMGkejhNI+fFgR/p86CaP/Dum8iDaqfKXgoY9wuzA9mDUOCPGwrr3CXg==",
+      "type": "package",
+      "path": "microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnet.png",
+        "lib/net46/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll",
+        "lib/net46/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.pdb",
+        "lib/net46/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.xml",
+        "lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll",
+        "lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.pdb",
+        "lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.xml",
+        "microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.1.1.1.nupkg.sha512",
+        "microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.nuspec",
+        "runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll",
+        "runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.pdb",
+        "runtimes/win/lib/net46/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll",
+        "runtimes/win/lib/net46/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.pdb",
+        "runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll",
+        "runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.pdb"
+      ]
+    },
     "Microsoft.Data.SqlClient.SNI.runtime/2.0.0": {
       "sha512": "ct81NLX9s8L1cSNrs2ex25ZcKYd9gsp/idsmsuseL/4a/lc0AJcZpbaXBIB6eOaOWEK/qhTmNXpl+Cmhm6V03g==",
       "type": "package",
@@ -2707,20 +2756,26 @@
         "microsoft.rest.clientruntime.nuspec"
       ]
     },
-    "Microsoft.Rest.ClientRuntime.Azure/3.3.18": {
-      "sha512": "pCtem10PRQYvzRiwJVInsccsqB0NrTjW83NF3zWk1LpN3IS0AneZKq89RyogDT7mRMT1Li/mLY8N8kU6RAiK0g==",
+    "Microsoft.Rest.ClientRuntime.Azure/3.3.19": {
+      "sha512": "+NVBWvRXNwaAPTZUxjUlQggsrf3X0GbiRoxYfgc3kG9E55ZxZxvZPT3nIfC4DNqzGSXUEvmLbckdXgBBzGdUaA==",
       "type": "package",
-      "path": "microsoft.rest.clientruntime.azure/3.3.18",
+      "path": "microsoft.rest.clientruntime.azure/3.3.19",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net452/Microsoft.Rest.ClientRuntime.Azure.dll",
         "lib/net452/Microsoft.Rest.ClientRuntime.Azure.runtimeconfig.json",
         "lib/net452/Microsoft.Rest.ClientRuntime.Azure.xml",
+        "lib/net461/Microsoft.Rest.ClientRuntime.Azure.dll",
+        "lib/net461/Microsoft.Rest.ClientRuntime.Azure.runtimeconfig.json",
+        "lib/net461/Microsoft.Rest.ClientRuntime.Azure.xml",
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll",
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.runtimeconfig.json",
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.xml",
-        "microsoft.rest.clientruntime.azure.3.3.18.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.Azure.dll",
+        "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.Azure.runtimeconfig.json",
+        "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.Azure.xml",
+        "microsoft.rest.clientruntime.azure.3.3.19.nupkg.sha512",
         "microsoft.rest.clientruntime.azure.nuspec"
       ]
     },
@@ -7262,6 +7317,7 @@
       "Microsoft.Azure.KeyVault >= 3.0.5",
       "Microsoft.Azure.Services.AppAuthentication >= 1.5.0",
       "Microsoft.Data.SqlClient >= 2.0.0",
+      "Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider >= 1.1.1",
       "Microsoft.Extensions.Configuration.Abstractions >= 3.1.7",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 3.1.7",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 3.1.7",
@@ -7329,6 +7385,10 @@
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[2.0.0, )"
+          },
+          "Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           },
           "Microsoft.Extensions.Configuration.Abstractions": {
             "target": "Package",
